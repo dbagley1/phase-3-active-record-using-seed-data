@@ -46,7 +46,6 @@ And a corresponding `Game` class that inherits from Active Record:
 ```rb
 # app/models/game
 class Game < ActiveRecord::Base
-
 end
 ```
 
@@ -58,13 +57,23 @@ a new record in the `games` table, you can open up a console session with
 `bundle exec rake console` and use the `.create` method:
 
 ```rb
-Game.create(title: "Breath of the Wild", platform: "Switch", genre: "Action-adventure", price: 60)
+Game.create(
+  title: "Breath of the Wild",
+  platform: "Switch",
+  genre: "Action-adventure",
+  price: 60
+)
 ```
 
 Awesome! Our database now has some data in it. We can create a few more games:
 
 ```rb
-Game.create(title: "Final Fantasy VII", platform: "Playstation", genre: "RPG", price: 60)
+Game.create(
+  title: "Final Fantasy VII",
+  platform: "Playstation",
+  genre: "RPG",
+  price: 60
+)
 Game.create(title: "Mario Kart", platform: "Switch", genre: "Racing", price: 60)
 ```
 
@@ -101,8 +110,18 @@ the `db/seeds.rb` file:
 
 ```rb
 # db/seeds.rb
-Game.create(title: "Breath of the Wild", platform: "Switch", genre: "Action-adventure", price: 60)
-Game.create(title: "Final Fantasy VII", platform: "Playstation", genre: "RPG", price: 60)
+Game.create(
+  title: "Breath of the Wild",
+  platform: "Switch",
+  genre: "Action-adventure",
+  price: 60
+)
+Game.create(
+  title: "Final Fantasy VII",
+  platform: "Playstation",
+  genre: "RPG",
+  price: 60
+)
 Game.create(title: "Mario Kart", platform: "Switch", genre: "Racing", price: 60)
 ```
 
@@ -140,10 +159,25 @@ try adding another `.create` call in our `db/seeds.rb` file:
 
 ```rb
 # db/seeds.rb
-Game.create(title: "Breath of the Wild", platform: "Switch", genre: "Action-adventure", price: 60)
-Game.create(title: "Final Fantasy VII", platform: "Playstation", genre: "RPG", price: 60)
+Game.create(
+  title: "Breath of the Wild",
+  platform: "Switch",
+  genre: "Action-adventure",
+  price: 60
+)
+Game.create(
+  title: "Final Fantasy VII",
+  platform: "Playstation",
+  genre: "RPG",
+  price: 60
+)
 Game.create(title: "Mario Kart", platform: "Switch", genre: "Racing", price: 60)
-Game.create(title: "Candy Crush Saga", platform: "Mobile", genre: "Puzzle", price: 0)
+Game.create(
+  title: "Candy Crush Saga",
+  platform: "Mobile",
+  genre: "Puzzle",
+  price: 0
+)
 ```
 
 And running the seed file again, then checking the data in the console:
